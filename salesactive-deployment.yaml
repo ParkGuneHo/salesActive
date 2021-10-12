@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: salesactive
-  namespace: sellers
+  namespace: team1
 spec:
   selector:
     matchLabels:
@@ -17,7 +17,7 @@ spec:
         sidecar.istio.io/inject: 'true'
     spec:
       containers:
-        - image: suhyung007/sellers:salesactive-9
+        - image: chump1/sellers:salesactive-1
           name: salesactive
           hostname: salesactive
           ports:
